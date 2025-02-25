@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name's Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #007bff;
+            color: white;
+        }
+
+        header img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+
+        .buttons {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .buttons a {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            width: 200px;
+            text-align: center;
+        }
+
+        .projects, .about-me {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .projects .project-button {
+            display: inline-block;
+            margin: 10px;
+            padding: 20px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .about-me .blurb {
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px auto;
+            width: 80%;
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .about-me .more-info {
+            display: none;
+            padding-top: 10px;
+        }
+
+        .about-me button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .about-me button:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .projects .project-button {
+                width: 100%;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="your-image.jpg" alt="Your Name">
+    <h1>Welcome to My Personal Website!</h1>
+    <p>Catchy slogan or greeting here.</p>
+</header>
+
+<div class="buttons">
+    <a href="https://portfolio.com" target="_blank">Portfolio</a>
+    <a href="https://github.com/username" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/username" target="_blank">LinkedIn</a>
+    <a href="https://yourblog.com" target="_blank">Blog</a>
+    <a href="https://instagram.com/professional_instagram" target="_blank">Instagram</a>
+    <a href="https://anotherlink.com" target="_blank">Other Link</a>
+</div>
+
+<div class="projects">
+    <h2>Top 3 Projects</h2>
+    <a href="project1-link.html" class="project-button">Project 1</a>
+    <a href="project2-link.html" class="project-button">Project 2</a>
+    <a href="project3-link.html" class="project-button">Project 3</a>
+</div>
+
+<div class="about-me">
+    <h2>About Me</h2>
+    <div class="blurb">
+        <p>
+            Hi! I'm [Your Name], a passionate [your profession/field]. Here's a little bit about me and my work.<br>
+            <span class="initial-info">I love working on innovative projects and collaborating with creative minds.</span>
+            <span class="more-info">
+                In my free time, I enjoy [hobbies/interests], and I'm always looking to learn new things and take on exciting challenges.
+            </span>
+        </p>
+        <button onclick="toggleAboutMe()">Show More</button>
+    </div>
+</div>
+
+<script>
+    function toggleAboutMe() {
+        const moreInfo = document.querySelector('.about-me .more-info');
+        const button = document.querySelector('.about-me button');
+        
+        if (moreInfo.style.display === 'none' || moreInfo.style.display === '') {
+            moreInfo.style.display = 'block';
+            button.textContent = 'Show Less';
+        } else {
+            moreInfo.style.display = 'none';
+            button.textContent = 'Show More';
+        }
+    }
+</script>
+
+</body>
+</html>
