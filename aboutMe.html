@@ -1,91 +1,273 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website</title>
+    <title>Kae Strange Website</title>
     <style>
+        /* Basic Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+	    background-color:#D0EBD5;
+        }
 
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 15px 20px; /* Slightly increased padding */
+            color: white;
+        }
 
-/*about me section*/
-        .about-me {
-            padding: 20px;
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+
+        /* Header */
+        header {
             text-align: center;
+            color: white;
+	    padding:0;
+            background-image: url('image.png'); 
+            background-size: cover;
+            background-position: center;
+            height: 300px;  /* 3/4th the previous height of 600px */
         }
 
-        .about-me .blurb {
-            background-color: #ffffff;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 10px auto;
-            width: 80%;
-            max-width: 600px;
-            text-align: left;
+        header img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
         }
 
-        .about-me .more-info {
-            display: none;
-            padding-top: 10px;
+        header h1 {
+	    padding-top:30px;
+            font-size: 4em; 
+            margin: 0;
         }
 
-        .about-me button {
+        header p {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+	
+	header button {
             background-color: #007bff;
             color: white;
             border: none;
             padding: 10px 15px;
             border-radius: 8px;
             cursor: pointer;
+            margin-top: 10px;
         }
 
-        .about-me button:hover {
+	header button:hover {
             background-color: #0056b3;
         }
 
-        @media (max-width: 768px) {
-            .interests {
-                flex-direction: column;
-                width: 100%;
-            }
-
-            .interest-box {
-                width: 80%;
-                margin: 10px auto;
-            }
+	footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
         }
 
- </style>
-</head>
+        .links a {
+            color: white;
+            text-decoration: none;
+            margin-right: 15px;
+            font-size: 1.1em;
+        }
 
-<div class="about-me" id="about-me">
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+	
+	/* about Section */
+
+        .about {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 40px;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+	    padding: 40px;
+        }
+
+        .about .description {
+            width: 55%;
+            text-align: left;
+            padding-right: 20px;
+        }
+
+        .about .image {
+            width: 45%;
+            text-align: left;
+        }
+
+        .about img {
+            width: 50%;
+            height: auto;
+            max-width: 300px;
+            border-radius: 8px;
+        }
+
+        .about button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .about button:hover {
+            background-color: #0056b3;
+        }
+
+	.grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            width: 80%;
+	    padding: 5% 10%;
+	    padding-top:20%;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+	    
+        }
+        .grid-item {
+            display: flex;
+            align-items: center;
+            padding: 30px;
+            border-radius: 10px;
+	    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+	    width: 85%;
+	    height: 60%;
+
+            
+        }
+        .photo {
+            flex: 1;
+            text-align: center;
+        }
+        .photo img {
+            width: 100%;
+            max-width: 150px;
+            border-radius: 10px;
+        }
+        .text {
+            flex: 2;
+            padding-left: 20px;
+        }
+
+
+
+        
+
+    </style>
+</head>
 <body>
-    <h2>About Me</h2>
-    <div class="blurb">
-        <p>
-            Hi! I'm [Your Name], a passionate [your profession/field]. Here's a little bit about me and my work.<br>
-            <span class="initial-info">I love working on innovative projects and collaborating with creative minds.</span>
-            <span class="more-info">
-                In my free time, I enjoy [hobbies/interests], and I'm always looking to learn new things and take on exciting challenges.
-            </span>
-        </p>
-        <button onclick="toggleAboutMe()">Show More</button>
+<!-- Navigation Bar -->
+<nav>
+    <a href="index.html"><div class="website-name" style="font-size: 2em;">Kae Website</div></a> 
+    <div class="nav-links">
+        <a href="portfolio.html">Portfolio</a>
+        <a>About Me</a>
     </div>
+</nav>
+
+<header> 
+    <h1>Welcome!</h1>
+    <p>Glade you stopped by</p>
+
+</header>
+
+<div class="about">
+	<div class="image" >
+            <img src="images/swish.png" alt="Project 2">
+        </div>
+        <div class="description"">
+            <h2>About Me</h2>
+            <p>This is the about me page more to come soon </p>
+        </div>
 </div>
 
-<script>
-    function toggleAboutMe() {
-        const moreInfo = document.querySelector('.about-me .more-info');
-        const button = document.querySelector('.about-me button');
-        
-        if (moreInfo.style.display === 'none' || moreInfo.style.display === '') {
-            moreInfo.style.display = 'block';
-            button.textContent = 'Show Less';
-        } else {
-            moreInfo.style.display = 'none';
-            button.textContent = 'Show More';
-        }
-    }
-</script>
+<div class="grid-container">
+        <div class="grid-item">
+            <div class="photo">
+                <img src="image.png" alt="Image 1">
+            </div>
+            <div class="text">
+                <h2>Title 1</h2>
+                <p>Description for item 1.</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="photo">
+                <img src="image.png" alt="Image 2">
+            </div>
+            <div class="text">
+                <h2>Title 2</h2>
+                <p>Description for item 2.</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="photo">
+                <img src="image.png" alt="Image 3">
+            </div>
+            <div class="text">
+                <h2>Title 3</h2>
+                <p>Description for item 3.</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="photo">
+                <img src="image.png" alt="Image 4">
+            </div>
+            <div class="text">
+                <h2>Title 4</h2>
+                <p>Description for item 4.</p>
+            </div>
+        </div>
+    </div>
+
+<!-- Footer Section -->
+<footer>
+    <div class="left-section">
+	<span> Kae.strange@tutanota.com</span>
+    </div>
+
+    <div class="right-section">
+        <div class="links">
+	    <a href="portfolio.html" target="_blank">Portfolio</a>
+            <a href="www.linkedin.com/in/kaestrange" target="_blank">LinkedIn</a>
+            <a href="https://github.com/K3nn8DN" target="_blank">GitHub</a>
+            <a href="images/Kae-Strange-Resume.pdf" target="_blank">Resume</a>
+            <a href="aboutMe.html">About Me</a>
+        </div>
+    </div>
+</footer>
+
 
 </body>
 </html>

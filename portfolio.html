@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kae Strange Website</title>
+    <style>
+        /* Basic Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+	    background-color:#D0EBD5;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 15px 20px; /* Slightly increased padding */
+            color: white;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            color: white;
+	    padding:0;
+            background-image: url('image.png'); 
+            background-size: cover;
+            background-position: center;
+            height: 300px;  /* 3/4th the previous height of 600px */
+        }
+
+        header img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+	    padding-top:30px;
+            font-size: 4em; 
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+	
+	header button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+	header button:hover {
+            background-color: #0056b3;
+        }
+
+	footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        .links a {
+            color: white;
+            text-decoration: none;
+            margin-right: 15px;
+            font-size: 1.1em;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+	
+	.grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            width: 80%;
+	    padding: 3% 10%;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+	    
+        }
+        .grid-item {
+            display: flex;
+            align-items: center;
+            padding: 30px;
+            border-radius: 10px;
+	    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+	    width: 85%;
+	    height: 60%;
+
+            
+        }
+        .photo {
+            flex: 1;
+            text-align: center;
+        }
+        .photo img {
+            width: 100%;
+            max-width: 150px;
+            border-radius: 10px;
+        }
+        .text {
+            flex: 2;
+            padding-left: 20px;
+        }
+
+	.buttons{
+	    width:100%;
+	    padding-top:5%;
+	    text-align: center;
+	
+	}
+	.buttons button{
+	 background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 10px;
+	    width: 10%;
+	}
+
+	.buttons button:hover {
+            background-color: #0056b3;
+        }
+
+	h1{
+	    text-align:center;
+	}
+
+
+        
+
+    </style>
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav>
+    <a href="index.html"><div class="website-name" style="font-size: 1.5em;">Kae Website</div></a>
+    <div class="nav-links">
+        <a>Portfolio</a>
+        <a href="aboutMe.html">About Me</a>
+    </div>
+</nav>
+
+<header> 
+    <h1>Welcome!</h1>
+    <p>Glade you stopped by</p>
+
+</header>
+
+<h1>Portfolio</h1>
+<div class="buttons">
+<button>ALL</button> <button>ALL</button>  <button>ALL</button> <button>ALL</button>
+</div>
+<div class="grid-container">
+        <div class="grid-item">
+            <div class="photo">
+                <img src="image.png" alt="Image 1">
+            </div>
+            <div class="text">
+                <h2>Title 1</h2>
+                <p>Description for item 1.</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="photo">
+                <img src="image.png" alt="Image 2">
+            </div>
+            <div class="text">
+                <h2>Title 2</h2>
+                <p>Description for item 2.</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="photo">
+                <img src="image.png" alt="Image 3">
+            </div>
+            <div class="text">
+                <h2>Title 3</h2>
+                <p>Description for item 3.</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="photo">
+                <img src="image.png" alt="Image 4">
+            </div>
+            <div class="text">
+                <h2>Title 4</h2>
+                <p>Description for item 4.</p>
+            </div>
+        </div>
+    </div>
+
+<!-- Footer Section -->
+<footer>
+    <div class="left-section">
+	<span> Kae.strange@tutanota.com</span>
+    </div>
+
+    <div class="right-section">
+        <div class="links">
+	    <a href="portfolio.html" target="_blank">Portfolio</a>
+            <a href="www.linkedin.com/in/kaestrange" target="_blank">LinkedIn</a>
+            <a href="https://github.com/K3nn8DN" target="_blank">GitHub</a>
+            <a href="images/Kae-Strange-Resume.pdf" target="_blank">Resume</a>
+            <a href="aboutMe.html">About Me</a>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>
