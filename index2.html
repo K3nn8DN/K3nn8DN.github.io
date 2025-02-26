@@ -18,7 +18,7 @@
             justify-content: space-between;
             align-items: center;
             background-color: #333;
-            padding: 15px 20px; /* Slightly increased padding */
+            padding: 15px 20px;
             color: white;
         }
 
@@ -38,12 +38,12 @@
         /* Header */
         header {
             text-align: center;
-            padding: 90px 20px; /* Adjusted to 3/4th of the previous height */
+            padding: 90px 20px;
             color: white;
             background-image: url('image.png'); /* Replace with your header image */
             background-size: cover;
             background-position: center;
-            height: 450px;  /* 3/4th the previous height of 600px */
+            height: 450px;
         }
 
         header img {
@@ -54,7 +54,7 @@
         }
 
         header h1 {
-            font-size: 4em; /* Larger website name */
+            font-size: 4em;
             margin: 0;
         }
 
@@ -63,49 +63,67 @@
             margin: 10px 0;
         }
 
-
         /* Interests Section */
-        .interests {
-            padding: 40px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            width: 60%;
-            margin: 0 auto;
-        }
+.interests {
+    width: 100%;  /* Make the section span the full width of the screen */
+    padding: 40px 0;  /* Remove padding on left/right, we will control margins on squares */
+    padding-top: 20%;
+    display: flex;
+    justify-content: center;  /* Centers the interest boxes */
+    align-items: flex-end;  /* Aligns the items at the bottom of the section */    flex-wrap: wrap;
+    position: relative;
+    flex-wrap: wrap;
+}
 
-        .interest-box {
-            position: relative;
-            background-color: #28a745;
-            color: white;
-            border-radius: 8px;
-            width: 30%;
-            height: 0;
-            padding-bottom: 30%;  /* Maintain square shape */
-            margin: 10px;
-            text-align: center;
-            box-sizing: border-box;
-            overflow: hidden;
-        }
+/* Interests Background Rectangle */
+.interests-background {
+    position: absolute;
+    top: 10%;  /* Align it with the top of the container */
+    left: 0;
+    width: 100%;
+    height: 400px;  /* Set the height of the background rectangle */
+    background-color: #3498db; /* Blue background for visibility */
+    z-index: -1; /* Places it behind the squares */
+    text-align: left;
+    padding-left: 12%;  /* Add left padding for the text */
+    padding-top: 5%;
+    box-sizing: border-box; 
+}
 
-        .interest-box a {
-            display: block;
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
 
-        .interest-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            cursor: pointer;
-        }
+/* Interest Box */
+.interest-box {
+    position: relative;
+    background-color: #28a745;
+    color: white;
+    border-radius: 8px;
+    width: 25%;  /* The boxes will take up 30% of the width of the container */
+    height: 0;
+    padding-bottom: 25%;  /* Maintain square shape */
+    margin: 0.3%;  /* Reduced margin to 3% to bring boxes closer together */
+    text-align: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    
+}
 
-	/* Portfolio Section */
+/* Image inside the Interest Box */
+.interest-box img {
+    width: 100%%;
+    height: 100%%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/* For smaller screens (e.g. mobile) */
+@media (max-width: 768px) {
+    .interest-box {
+        width: 80%;  /* Adjust width to 80% on smaller screens */
+        margin: 10px auto;  /* Center them with equal space on the sides */
+    }
+}
+
+        /* Portfolio Section */
         .portfolio {
             padding: 40px 20px;
             text-align: center;
@@ -198,59 +216,18 @@
             background-color: #0056b3;
         }
 
-	
-	/*about me section*/
-        .about-me {
-            padding: 20px;
-            text-align: center;
-        }
 
-        .about-me .blurb {
-            background-color: #ffffff;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 10px auto;
-            width: 80%;
-            max-width: 600px;
-            text-align: left;
-        }
 
-        .about-me .more-info {
-            display: none;
-            padding-top: 10px;
-        }
 
-        .about-me button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 8px;
-            cursor: pointer;
-        }
 
-        .about-me button:hover {
-            background-color: #0056b3;
-        }
 
-        @media (max-width: 768px) {
-            .interests {
-                flex-direction: column;
-                width: 100%;
-            }
-
-            .interest-box {
-                width: 80%;
-                margin: 10px auto;
-            }
-        }
     </style>
 </head>
 <body>
 
 <!-- Navigation Bar -->
 <nav>
-    <div class="website-name" style="font-size: 2em;">Your Website</div> <!-- Larger website name -->
+    <div class="website-name" style="font-size: 2em;">Your Website</div>
     <div class="nav-links">
         <a href="#interests">Interests</a>
         <a href="#about-me">About Me</a>
@@ -258,12 +235,19 @@
 </nav>
 
 <header>
-    <img src="image.png" alt="Your Name"> <!-- Replace with your header image -->
+    <img src="image.png" alt="Your Name">
     <h1>Welcome to My Personal Website!</h1>
     <p>Catchy slogan or greeting here.</p>
 </header>
 
+<h1>Words about the blocks below</h1>
+
+<!-- intrests Section -->
 <div class="interests" id="interests">
+    <div class="interests-background">
+	<h2>words about the blocks bellow:</h2> 
+		<p>/n and intrests : and closing words</p>
+    </div> 
     <div class="interest-box">
         <a href="interest1-link.html">
             <img src="image.png" alt="Interest 1">
@@ -307,36 +291,6 @@
     </div>
 </div>
 
-
-
-<div class="about-me" id="about-me">
-    <h2>About Me</h2>
-    <div class="blurb">
-        <p>
-            Hi! I'm [Your Name], a passionate [your profession/field]. Here's a little bit about me and my work.<br>
-            <span class="initial-info">I love working on innovative projects and collaborating with creative minds.</span>
-            <span class="more-info">
-                In my free time, I enjoy [hobbies/interests], and I'm always looking to learn new things and take on exciting challenges.
-            </span>
-        </p>
-        <button onclick="toggleAboutMe()">Show More</button>
-    </div>
-</div>
-
-<script>
-    function toggleAboutMe() {
-        const moreInfo = document.querySelector('.about-me .more-info');
-        const button = document.querySelector('.about-me button');
-        
-        if (moreInfo.style.display === 'none' || moreInfo.style.display === '') {
-            moreInfo.style.display = 'block';
-            button.textContent = 'Show Less';
-        } else {
-            moreInfo.style.display = 'none';
-            button.textContent = 'Show More';
-        }
-    }
-</script>
 
 </body>
 </html>
