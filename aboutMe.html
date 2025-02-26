@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <style>
+
+
+/*about me section*/
+        .about-me {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .about-me .blurb {
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px auto;
+            width: 80%;
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .about-me .more-info {
+            display: none;
+            padding-top: 10px;
+        }
+
+        .about-me button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .about-me button:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .interests {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .interest-box {
+                width: 80%;
+                margin: 10px auto;
+            }
+        }
+
+ </style>
+</head>
+
+<div class="about-me" id="about-me">
+<body>
+    <h2>About Me</h2>
+    <div class="blurb">
+        <p>
+            Hi! I'm [Your Name], a passionate [your profession/field]. Here's a little bit about me and my work.<br>
+            <span class="initial-info">I love working on innovative projects and collaborating with creative minds.</span>
+            <span class="more-info">
+                In my free time, I enjoy [hobbies/interests], and I'm always looking to learn new things and take on exciting challenges.
+            </span>
+        </p>
+        <button onclick="toggleAboutMe()">Show More</button>
+    </div>
+</div>
+
+<script>
+    function toggleAboutMe() {
+        const moreInfo = document.querySelector('.about-me .more-info');
+        const button = document.querySelector('.about-me button');
+        
+        if (moreInfo.style.display === 'none' || moreInfo.style.display === '') {
+            moreInfo.style.display = 'block';
+            button.textContent = 'Show Less';
+        } else {
+            moreInfo.style.display = 'none';
+            button.textContent = 'Show More';
+        }
+    }
+</script>
+
+</body>
+</html>
