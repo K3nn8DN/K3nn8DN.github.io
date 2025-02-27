@@ -88,6 +88,7 @@
             align-items: center;
             width: 100%;
             margin: 0 auto;
+	    
 
         }
 
@@ -103,6 +104,9 @@
             text-align: center;
             box-sizing: border-box;
             overflow: hidden;
+	    text-align: left;
+            font-size: 16px;
+            font-weight: bold;
         }
 
         .interest-box a {
@@ -119,11 +123,32 @@
             height: 100%;
             object-fit: cover;
             cursor: pointer;
+	    transition: 0.6s;
         }
 
+	.interest-box span {
+            position: absolute;
+            opacity: 0;
+            transition: 0.3s;
+            padding: 5%;
+            color: black;
+        }
+
+	.interest-box h1,h2{
+	    padding-left: 25%;
+	}
+
+	
 	.interest-box:hover {
-	    background-image: None;
-            background-color: #0056b3;
+            background-color: white;
+        }
+
+        .interest-box:hover img {
+            opacity: 0;
+        }
+
+	.interest-box:hover span {
+            opacity: 1;
         }
 
 
@@ -307,16 +332,19 @@
         <a href="#interest1-link.html">
             <img src="images/GameIcon.png" alt="Interest 1">
         </a>
+        <span><h1>Text 1 clabfcl ecvbpb wsbflv vbwfbb</h1></span>
     </div>
     <div class="interest-box">
         <a href="#interest2-link.html">
             <img src="images/techIcon2.png" alt="Interest 2">
         </a>
+        <span><h1>Text 1 clabfcl ecvbpb wsbflv vbwfbb</h1></span>
     </div>
     <div class="interest-box">
         <a href="#interest3-link.html">
             <img src="images/otherIcon2.png" alt="Interest 3">
         </a>
+        <span><h1>Text 1 clabfcl ecvbpb wsbflv vbwfbb</h1></span>
     </div>
 </div>
 
