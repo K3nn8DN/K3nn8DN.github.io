@@ -6,6 +6,10 @@
     <title>Kae Strange Website</title>
     <style>
         /* Basic Styles */
+	h1, h3{
+	    padding: 0 20%;
+	    
+	}
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -66,7 +70,7 @@
         }
 	
 	header button {
-            background-color: #007bff;
+            background-color: green;
             color: white;
             border: none;
             padding: 10px 15px;
@@ -76,7 +80,7 @@
         }
 
 	header button:hover {
-            background-color: #0056b3;
+            background-color: #005700;
         }
 
 
@@ -135,7 +139,8 @@
         }
 
 	.interest-box h1,h2{
-	    padding-left: 25%;
+	    padding-left: 28%;
+	    padding top:10%;
 	}
 
 	
@@ -158,65 +163,39 @@
 	    padding-top:5%;
             text-align: center;
 	    width:100%;
+	    
         }
 
-        .portfolio-item {
+        .portfolio-item,  .portfolio-item2{
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 40px;
             width: 100%;
             max-width: 1000px;
             margin: 0 auto;
-	    padding-bottom: 5%;
+	    background:white;
+	    padding: 2% 0%;
+	    border-radius: 3%;
+	    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
         }
+	
 
         .portfolio-item .description {
             width: 45%;
             text-align: left;
             padding-right: 20px;
         }
+	.portfolio-item h2, .portfolio-item2 h2{
+	    padding:0;
+	    
+	}
 
         .portfolio-item .image {
             width: 45%;
             text-align: right;
         }
-
-        .portfolio-item img {
-            width: 100%;
-            height: auto;
-            max-width: 300px;
-            border-radius: 8px;
-        }
-
-        .portfolio-item button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 8px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-
-        .portfolio-item button:hover {
-            background-color: #0056b3;
-        }
-
-	/* Portfolio Section2 */
-  
-
-        .portfolio-item2 {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 40px;
-            width: 100%;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .portfolio-item2 .description {
+	
+	.portfolio-item2 .description {
             width: 45%;
             text-align: left;
             padding-right: 20px;
@@ -227,15 +206,15 @@
             text-align: left;
         }
 
-        .portfolio-item2 img {
+        .portfolio-item img, .portfolio-item2 img {
             width: 100%;
             height: auto;
             max-width: 300px;
             border-radius: 8px;
         }
 
-        .portfolio-item2 button {
-            background-color: #007bff;
+        .portfolio-item button, .portfolio-item2 button {
+            background-color: green;
             color: white;
             border: none;
             padding: 10px 15px;
@@ -244,9 +223,15 @@
             margin-top: 10px;
         }
 
-        .portfolio-item2 button:hover {
-            background-color: #0056b3;
+        .portfolio-item button:hover, .portfolio-item2 button:hover {
+            background-color: #005700;
         }
+
+	.portfolio-space{
+	 padding: 50px;
+	}
+
+        
 
 	/*News Section*/
         .news-container {
@@ -276,7 +261,14 @@
             padding: 10px;
             font-size: 14px;
         }
+	
+	.news-box h1,.news-box h3{
+	    padding:0 10%;
+	    
 
+	}
+
+	/*footer Section*/
         footer {
             display: flex;
             justify-content: space-between;
@@ -297,10 +289,7 @@
             text-decoration: underline;
         }
 	
-	h1, h3{
-	    padding: 0 20%;
-	    
-	}
+	 
 
     </style>
 </head>
@@ -308,7 +297,7 @@
 
 <!-- Navigation Bar -->
 <nav>
-    <div class="website-name" style="font-size: 2em;">Kae Website</div> 
+    <div class="website-name" style="font-size: 2em;">Kae Strange</div> 
     <div class="nav-links">
         <a href="portfolio.html">Portfolio</a>
         <a href="aboutMe.html">About Me</a>
@@ -317,8 +306,8 @@
 
 <header>
     <img src="image.png" alt="Kae Strange"> 
-    <h1>Welcome!</h1>
-    <p>Glad you stopped by</p>
+    <h1>Welcome to Kae's Website!</h1>
+    <p>I'm Making Everything Green, Coding Everything Clean.</p>
     <a href="https://github.com/K3nn8DN">
     <button>My GitHub</button>
     </a>
@@ -332,19 +321,19 @@
         <a href="#interest1-link.html">
             <img src="images/GameIcon.png" alt="Interest 1">
         </a>
-        <span><h1>Text 1 clabfcl ecvbpb wsbflv vbwfbb</h1></span>
+        <span><h1>Unity 3D Analog 2D</h1></span>
     </div>
     <div class="interest-box">
         <a href="#interest2-link.html">
             <img src="images/techIcon2.png" alt="Interest 2">
         </a>
-        <span><h1>Text 1 clabfcl ecvbpb wsbflv vbwfbb</h1></span>
+        <span><h1>C++ Java Python C# </h1></span>
     </div>
     <div class="interest-box">
         <a href="#interest3-link.html">
             <img src="images/otherIcon2.png" alt="Interest 3">
         </a>
-        <span><h1>Text 1 clabfcl ecvbpb wsbflv vbwfbb</h1></span>
+        <span><h1>Intelij Git Linux .Net</h1></span>
     </div>
 </div>
 
@@ -362,7 +351,7 @@
             <img src="images/colorRadius.png" alt="Project 1">
         </div>
     </div>
-
+<div class="portfolio-space"></div>
     <div class="portfolio-item2">
 	<div class="image" >
             <img src="images/swish.png" alt="Project 2">
@@ -378,12 +367,12 @@
     </div>
 </div>
 
-<h1>Latest News</h1>
+<h1 >Latest News</h1>
 <div class="news-container">
         <div class="news-box">
             <img src="images/databaseIcon.png" alt="News Image">
             <div class="news-text">
-		<h1>Current Project News:</h1>
+		<h1>Current Project:</h1>
 		<h3>Im currently working on a Spring Database</h3>
 	    </div>
         </div>
