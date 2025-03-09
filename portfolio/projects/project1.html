@@ -1,4 +1,142 @@
-<button onclick="window.history.back()">Go Back</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <style>
+        body {
+            background-color: #f3f4f6;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .go-back {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            width: 3rem;
+            height: 3rem;
+            background-color: #1f2937;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+        .header {
+            position: relative;
+            width: 100%;
+            height: 16rem;
+            background: url('https://source.unsplash.com/random/1600x400') center/cover no-repeat;
+        }
+        .header-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(31, 41, 55, 0.5), transparent);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .header-text {
+            background: rgba(255, 255, 255, 0.4);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            text-align: center;
+            width: 50%;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            max-width: 1024px;
+            margin: auto;
+        }
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+            }
+        }
+        .text-box {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            flex: 1;
+        }
+        .video-section {
+            flex: 1;
+            text-align: center;
+        }
+        .video-section video {
+            width: 100%;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .button {
+            margin-top: 1rem;
+            background: #2563eb;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        .button:hover {
+            background: #1d4ed8;
+        }
+        .bottom-text-box {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 1.5rem auto;
+            max-width: 1024px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Go Back Button -->
+    <a href="#" class="go-back">←</a>
+    
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-overlay">
+            <div class="header-text">
+                <h1>Header Text Here</h1>
+                <p>Fades into the background smoothly.</p>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Content Section -->
+    <div class="container">
+        <!-- Text Box with Shadow -->
+        <div class="text-box">
+            <h2>Text Box Title</h2>
+            <p>This is a sample paragraph inside the text box. It has a shadow effect to stand out.</p>
+        </div>
+        
+        <!-- Video Section -->
+        <div class="video-section">
+            <video controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <button class="button">Click Me</button>
+        </div>
+    </div>
 
-
-
+    <!-- Additional Text Box Below Everything -->
+    <div class="bottom-text-box">
+        <h2>Additional Information</h2>
+        <p>This is another text box placed below everything to provide more details.</p>
+    </div>
+</body>
+</html>
